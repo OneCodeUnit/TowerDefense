@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tower Defense</title>
+    <style>
+        canvas {
+            background: Lavender;
+            border: solid Black;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            background: Moccasin repeat-y center;
+            background-image: url("img/back.png");
+        }
+    </style>
+</head>
+
+<body onload="loadPage()">
+    <div class="wrapper">
+        <canvas id="Game" width="1024" height="768">
+            <script src="classes.js"></script>
+            <script src="functionsOther.js"></script>
+            <script src="functionsDraw.js"></script>
+            <script src="main.js"></script>
+            <script>
+                ctx.fillStyle = "Navy";
+                ctx.fillText("Идёт загрузка уровня...", canvas.width / 2 - 100, canvas.height / 2);
+                function loadPage() {
+                    setInterval(Draw, 16.667);
+                }
+            </script>
+        </canvas>
+    </div>
+</body>
+
+</html>
